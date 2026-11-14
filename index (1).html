@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="C# DevLab - Explora os ambientes de desenvolvimento C#: Visual Studio, Visual Studio Code e JetBrains Rider.">
+    <meta name="theme-color" content="#0b0d14">
+    <title>C# DevLab | Ambientes de Desenvolvimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a href="#conteudo" class="skip-link">Saltar para o conteúdo</a>
+
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<header class="navbar" id="navbar">
+    <a href="#inicio" class="logo" aria-label="C# DevLab - início">C#<span>DevLab</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav id="mainNav" aria-label="Navegação principal">
+        <a href="#conceito">O conceito</a>
+        <a href="#ferramentas">Ferramentas</a>
+        <a href="#comparacao">Comparação</a>
+        <a href="#laboratorio">Laboratório</a>
+        <a href="#escolhe">Qual escolher?</a>
+        <a href="#desafio">Desafio</a>
+        <a href="#desafio" class="nav-button nav-button-mobile">Participar ↗</a>
+    </nav>
+
+    <a href="#desafio" class="nav-button">Participar ↗</a>
+</header>
+
+<main id="conteudo">
+
+    <!-- INÍCIO -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="status">
+                <span class="status-dot"></span>
+                SDAC · FUNDAMENTOS DE PROGRAMAÇÃO
+            </div>
+
+            <h1>
+                Onde o código<br>
+                ganha <span>vida.</span>
+            </h1>
+
+            <p>
+                Três ferramentas. Uma linguagem.
+                Descobre os ambientes de desenvolvimento
+                utilizados para criar aplicações em C#.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#ferramentas" class="primary-button">Explorar ferramentas →</a>
+                <a href="#laboratorio" class="secondary-button">Entrar no laboratório</a>
+            </div>
+
+            <div class="hero-info">
+                <div>
+                    <strong data-count="3">03</strong>
+                    <span>Ferramentas</span>
+                </div>
+                <div>
+                    <strong>C#</strong>
+                    <span>Linguagem</span>
+                </div>
+                <div>
+                    <strong data-count="1">01</strong>
+                    <span>Objectivo</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+            <div class="code-window">
+                <div class="window-top">
+                    <div class="window-dots">
+                        <i></i><i></i><i></i>
+                    </div>
+                    <span>Program.cs</span>
+                    <span class="window-language">C#</span>
+                </div>
+
+                <div class="code-content">
+                    <p><span class="line">01</span> <span class="purple">using</span> System;</p>
+                    <p><span class="line">02</span></p>
+                    <p><span class="line">03</span> <span class="purple">class</span> <span class="yellow">Program</span></p>
+                    <p><span class="line">04</span> {</p>
+                    <p><span class="line">05</span> &nbsp;&nbsp;<span class="purple">static void</span> Main()</p>
+                    <p><span class="line">06</span> &nbsp;&nbsp;{</p>
+                    <p><span class="line">07</span> &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(</p>
+                    <p><span class="line">08</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Olá, mundo!"</span>);</p>
+                    <p><span class="line">09</span> &nbsp;&nbsp;}</p>
+                    <p><span class="line">10</span> }</p>
+                </div>
+
+                <div class="terminal">
+                    <span class="terminal-label">TERMINAL</span>
+                    <p><span class="terminal-symbol">&gt;</span> dotnet run</p>
+                    <p class="terminal-output" id="heroOutput">Olá, mundo!</p>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+
+            <div class="floating-tag tag-one">● C#</div>
+            <div class="floating-tag tag-two">.NET</div>
+        </div>
+
+        <a href="#conceito" class="scroll-indicator">DESCE PARA EXPLORAR ↓</a>
+    </section>
+
+
+    <!-- CONCEITO -->
+    <section class="section concept" id="conceito">
+        <div class="section-heading reveal">
+            <span class="eyebrow">01 / PRIMEIRO PASSO</span>
+            <h2>Antes de programar,<br>é preciso ter <span>as ferramentas certas.</span></h2>
+        </div>
+
+        <div class="concept-grid">
+            <article class="concept-card reveal">
+                <div class="concept-icon" aria-hidden="true">⌘</div>
+                <h3>O que é um IDE?</h3>
+                <p>
+                    Um IDE é um ambiente de desenvolvimento integrado.
+                    Reúne várias ferramentas num só programa, como o editor,
+                    compilador e depurador.
+                </p>
+                <p class="concept-example">
+                    <strong>Pensa numa cozinha totalmente equipada:</strong>
+                    tudo o que precisas já lá está.
+                </p>
+            </article>
+
+            <article class="concept-card reveal">
+                <div class="concept-icon" aria-hidden="true">⌨</div>
+                <h3>E um editor de código?</h3>
+                <p>
+                    É uma ferramenta focada na escrita e edição de código.
+                    Pode precisar de extensões para oferecer funcionalidades
+                    mais avançadas.
+                </p>
+                <p class="concept-example">
+                    <strong>Pensa numa bancada vazia:</strong>
+                    levas só as ferramentas que vais usar.
+                </p>
+            </article>
+        </div>
+
+        <div class="info-strip reveal">
+            <span>IDE</span>
+            <p>Mais funcionalidades integradas, num único ambiente.</p>
+            <span class="strip-divider">/</span>
+            <span>EDITOR</span>
+            <p>Mais leve e flexível, com funcionalidades adicionais através de extensões.</p>
+        </div>
+    </section>
+
+
+    <!-- FERRAMENTAS -->
+    <section class="section tools-section" id="ferramentas">
+        <div class="section-heading reveal">
+            <span class="eyebrow">02 / CONHECE AS FERRAMENTAS</span>
+            <h2>Três formas de<br>desenvolver em <span>C#.</span></h2>
+            <p>Escolhe uma ferramenta para descobrires as suas características.</p>
+        </div>
+
+        <div class="tools-grid">
+
+            <article class="tool-card visual-studio reveal" data-tool="visual">
+                <div class="tool-top">
+                    <span class="tool-number">01</span>
+                    <span class="tool-type">IDE COMPLETO</span>
+                </div>
+
+                <div class="tool-logo" aria-hidden="true">VS</div>
+                <h3>Visual Studio</h3>
+                <p>
+                    Um ambiente de desenvolvimento completo,
+                    desenvolvido pela Microsoft.
+                </p>
+
+                <ul>
+                    <li>Depuração avançada</li>
+                    <li>Ferramentas integradas</li>
+                    <li>Suporte a várias linguagens</li>
+                </ul>
+
+                <div class="tool-footer">
+                    <span>Microsoft</span>
+                    <button type="button" data-open="visual" aria-controls="detailsPanel">Explorar ↗</button>
+                </div>
+            </article>
+
+
+            <article class="tool-card vscode reveal" data-tool="vscode">
+                <div class="tool-top">
+                    <span class="tool-number">02</span>
+                    <span class="tool-type">EDITOR DE CÓDIGO</span>
+                </div>
+
+                <div class="tool-logo" aria-hidden="true">⌘</div>
+                <h3>Visual Studio Code</h3>
+                <p>
+                    Um editor leve e personalizável,
+                    também desenvolvido pela Microsoft.
+                </p>
+
+                <ul>
+                    <li>Grande variedade de extensões</li>
+                    <li>Interface simples</li>
+                    <li>Multiplataforma</li>
+                </ul>
+
+                <div class="tool-footer">
+                    <span>Microsoft</span>
+                    <button type="button" data-open="vscode" aria-controls="detailsPanel">Explorar ↗</button>
+                </div>
+            </article>
+
+
+            <article class="tool-card rider reveal" data-tool="rider">
+                <div class="tool-top">
+                    <span class="tool-number">03</span>
+                    <span class="tool-type">IDE COMPLETO</span>
+                </div>
+
+                <div class="tool-logo" aria-hidden="true">R</div>
+                <h3>JetBrains Rider</h3>
+                <p>
+                    Um IDE especializado em desenvolvimento
+                    .NET e aplicações C#.
+                </p>
+
+                <ul>
+                    <li>Análise inteligente de código</li>
+                    <li>Ferramentas de refatoração</li>
+                    <li>Multiplataforma</li>
+                </ul>
+
+                <div class="tool-footer">
+                    <span>JetBrains</span>
+                    <button type="button" data-open="rider" aria-controls="detailsPanel">Explorar ↗</button>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="details-panel" id="detailsPanel" role="region" aria-live="polite" aria-label="Detalhes da ferramenta" hidden>
+            <button type="button" class="close-details" id="closeDetails" aria-label="Fechar detalhes">✕</button>
+            <span class="eyebrow">DETALHES DA FERRAMENTA</span>
+            <h3 id="detailsTitle">Ferramenta</h3>
+            <p id="detailsText"></p>
+            <div class="details-meta">
+                <div>
+                    <small>IDEAL PARA</small>
+                    <strong id="detailsIdeal"></strong>
+                </div>
+                <div>
+                    <small>PLATAFORMAS</small>
+                    <strong id="detailsPlatform"></strong>
+                </div>
+            </div>
+            <a id="detailsLink" href="#" target="_blank" rel="noopener noreferrer">Visitar site oficial ↗</a>
+        </div>
+    </section>
+
+
+    <!-- COMPARAÇÃO -->
+    <section class="section comparison-section" id="comparacao">
+        <div class="section-heading reveal">
+            <span class="eyebrow">03 / COMPARAÇÃO</span>
+            <h2>Qual é a <span>diferença?</span></h2>
+            <p>Compara as características principais de cada ferramenta. Passa o rato (ou toca) numa coluna para a destacar.</p>
+        </div>
+
+        <div class="comparison-table reveal" role="table" aria-label="Comparação entre Visual Studio, VS Code e Rider">
+            <div class="comparison-row comparison-header" role="row">
+                <span role="columnheader">CARACTERÍSTICA</span>
+                <span role="columnheader" data-col="visual">VISUAL STUDIO</span>
+                <span role="columnheader" data-col="vscode">VS CODE</span>
+                <span role="columnheader" data-col="rider">RIDER</span>
+            </div>
+
+            <div class="comparison-row" role="row">
+                <span role="rowheader">Tipo</span>
+                <span role="cell" data-col="visual" data-label="Visual Studio">IDE</span>
+                <span role="cell" data-col="vscode" data-label="VS Code">Editor</span>
+                <span role="cell" data-col="rider" data-label="Rider">IDE</span>
+            </div>
+
+            <div class="comparison-row" role="row">
+                <span role="rowheader">Multiplataforma</span>
+                <span role="cell" data-col="visual" data-label="Visual Studio" class="partial">Só Windows*</span>
+                <span role="cell" data-col="vscode" data-label="VS Code" class="yes">Sim</span>
+                <span role="cell" data-col="rider" data-label="Rider" class="yes">Sim</span>
+            </div>
+
+            <div class="comparison-row" role="row">
+                <span role="rowheader">Extensões</span>
+                <span role="cell" data-col="visual" data-label="Visual Studio" class="yes">Sim</span>
+                <span role="cell" data-col="vscode" data-label="VS Code" class="yes">Sim</span>
+                <span role="cell" data-col="rider" data-label="Rider" class="yes">Sim</span>
+            </div>
+
+            <div class="comparison-row" role="row">
+                <span role="rowheader">Depurador</span>
+                <span role="cell" data-col="visual" data-label="Visual Studio" class="yes">Integrado</span>
+                <span role="cell" data-col="vscode" data-label="VS Code" class="partial">Com extensões</span>
+                <span role="cell" data-col="rider" data-label="Rider" class="yes">Integrado</span>
+            </div>
+
+            <div class="comparison-row" role="row">
+                <span role="rowheader">Peso</span>
+                <span role="cell" data-col="visual" data-label="Visual Studio">Mais pesado</span>
+                <span role="cell" data-col="vscode" data-label="VS Code" class="yes">Mais leve</span>
+                <span role="cell" data-col="rider" data-label="Rider">Intermédio</span>
+            </div>
+
+            <div class="comparison-row" role="row">
+                <span role="rowheader">Foco principal</span>
+                <span role="cell" data-col="visual" data-label="Visual Studio">Desenvolvimento completo</span>
+                <span role="cell" data-col="vscode" data-label="VS Code">Leveza e flexibilidade</span>
+                <span role="cell" data-col="rider" data-label="Rider">Desenvolvimento .NET</span>
+            </div>
+        </div>
+
+        <p class="table-note">
+            *O Visual Studio completo está disponível para Windows.
+            O Visual Studio para Mac foi descontinuado em 2024.
+        </p>
+    </section>
+
+
+    <!-- LABORATÓRIO -->
+    <section class="section lab-section" id="laboratorio">
+        <div class="section-heading reveal">
+            <span class="eyebrow">04 / MÃO NA MASSA</span>
+            <h2>O teu primeiro<br><span>laboratório C#.</span></h2>
+            <p>Experimenta alterar o código e vê o resultado.</p>
+        </div>
+
+        <div class="lab-window reveal">
+            <div class="lab-toolbar">
+                <div>
+                    <span class="lab-dot"></span>
+                    <span>Program.cs</span>
+                </div>
+                <span>C# / .NET</span>
+            </div>
+
+            <form class="lab-content" id="labForm" autocomplete="off">
+                <div class="editor-area">
+                    <label for="userName">ESCREVE O TEU NOME</label>
+                    <input type="text" id="userName" placeholder="Exemplo: Santiago" maxlength="25">
+
+                    <div class="code-example" aria-label="Código de exemplo">
+                        <span class="code-comment">// O teu primeiro programa</span><br>
+                        <span class="code-purple">string</span> nome = <span class="code-green">"<span id="liveName">...</span>"</span>;<br><br>
+                        <span class="code-purple">if</span> (nome != <span class="code-green">""</span>)<br>
+                        {<br>
+                        &nbsp;&nbsp;Console.WriteLine(<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">"Olá, "</span> + nome);<br>
+                        }
+                    </div>
+
+                    <button type="submit" class="run-button">▶ Executar código</button>
+                    <p class="lab-hint">Dica: deixa o nome vazio e executa. O que acontece? Porquê?</p>
+                </div>
+
+                <div class="output-area">
+                    <div class="output-heading">
+                        <span>SAÍDA DO PROGRAMA</span>
+                        <span class="online">● ONLINE</span>
+                    </div>
+
+                    <div class="output-screen" id="output" role="status" aria-live="polite">
+                        <span class="output-muted">À espera de execução...</span>
+                    </div>
+
+                    <div class="output-footer">
+                        Simulação interactiva no navegador
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <p class="lab-note">
+            Nota: esta demonstração simula o resultado no navegador.
+            Para executar C# verdadeiro, utiliza o .NET SDK e um ambiente de desenvolvimento.
+        </p>
+    </section>
+
+
+    <!-- QUAL ESCOLHER -->
+    <section class="section quiz-section" id="escolhe">
+        <div class="section-heading reveal">
+            <span class="eyebrow">05 / QUAL ESCOLHER?</span>
+            <h2>Descobre a ferramenta<br><span>para ti.</span></h2>
+            <p>Três perguntas rápidas. Não há respostas erradas.</p>
+        </div>
+
+        <div class="quiz-card reveal" id="quiz">
+            <div class="quiz-progress" aria-hidden="true"><div id="quizBar"></div></div>
+            <div id="quizBody"></div>
+        </div>
+    </section>
+
+
+    <!-- DESAFIO -->
+    <section class="section challenge-section" id="desafio">
+        <div class="challenge-content reveal">
+            <span class="eyebrow">06 / A TUA VEZ</span>
+            <h2>O código está lançado.<br><span>Agora é contigo.</span></h2>
+            <p>
+                Participa no desafio da turma através do AhaSlides.
+                Lê o código QR ou abre directamente a apresentação.
+            </p>
+
+            <a href="https://ahaslides.com/TX0BT" id="ahaslidesButton" class="primary-button" target="_blank" rel="noopener noreferrer">
+                Abrir AhaSlides ↗
+            </a>
+        </div>
+
+        <div class="qr-card reveal">
+            <div class="qr-placeholder" id="qrArea">
+                <span>QR CODE</span>
+                <small>https://ahaslides.com/TX0BT</small>
+            </div>
+            <p>APONTA A CÂMARA E PARTICIPA</p>
+        </div>
+    </section>
+
+
+    <!-- CONCLUSÃO -->
+    <section class="section conclusion-section">
+        <span class="eyebrow reveal">07 / CONCLUSÃO</span>
+        <h2 class="reveal">Não existe uma ferramenta perfeita.<br>Existe a ferramenta <span>certa para cada projecto.</span></h2>
+        <p class="reveal">
+            O Visual Studio oferece um ambiente completo, o VS Code destaca-se
+            pela flexibilidade e o Rider pelas ferramentas avançadas para .NET.
+            A escolha depende das necessidades de cada programador.
+        </p>
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="footer-logo">C#<span>DevLab</span></div>
+    <p>Trabalho de SDAC · Ambientes de desenvolvimento em C#</p>
+    <p class="footer-small">Visual Studio · Visual Studio Code · JetBrains Rider</p>
+    <a href="#inicio" class="back-top">Voltar ao topo ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
